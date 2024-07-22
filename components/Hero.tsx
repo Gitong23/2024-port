@@ -1,5 +1,28 @@
 import React from 'react'
 import { Spotlight } from './ui/Spotlight'
+import { TextGenerateEffect } from './ui/TextGenerateEffect'
+import MagicButton from './ui/MagicButton'
+import { FaLocationArrow } from 'react-icons/fa'
+import { TypewriterEffect, TypewriterEffectSmooth } from './ui/TypingText'
+
+const words = [
+  {
+    text: 'Build',
+  },
+  {
+    text: 'awesome',
+  },
+  {
+    text: 'apps',
+  },
+  {
+    text: 'with',
+  },
+  {
+    text: 'Aceternity. ',
+    className: 'dark:text-karn-primary',
+  },
+]
 
 const Hero = () => {
   return (
@@ -18,9 +41,9 @@ const Hero = () => {
 
       <div
         className="h-screen w-full dark:bg-black-100 bg-white 
-      dark:bg-grid-white/[0.3] bg-grid-black/[0.2] 
-      flex items-center justify-center
-      absolute top-0 left-0
+        dark:bg-grid-white/[0.5] bg-grid-black/[0.2]  opacity-5
+        flex items-center justify-center
+        absolute top-0 left-0
       "
       >
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
@@ -37,6 +60,24 @@ const Hero = () => {
           <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
             Dynamic Web Magic with Next.js
           </h2>
+
+          <TypewriterEffectSmooth words={words} />
+
+          <p
+            className="
+              text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl
+            "
+          >
+            Hi, I&apos;m Karn, a full-stack developer based in Bangkok.
+          </p>
+
+          <a href="#">
+            <MagicButton
+              title="Show my work"
+              icon={<FaLocationArrow />}
+              position="left"
+            />
+          </a>
         </div>
       </div>
     </div>

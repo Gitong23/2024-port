@@ -27,6 +27,10 @@ const config = {
     },
     extend: {
       colors: {
+        karn: {
+          DEFAULT: '#40db8d',
+          primary: '#40db8d',
+        },
         black: {
           DEFAULT: '#000',
           100: '#000319',
